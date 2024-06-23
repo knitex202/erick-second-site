@@ -17,7 +17,7 @@ function Landing() {
       </div>
       <div className="flex flex-cols justify-center mt-16">
         <div className="flex overflow-hidden">
-          <div className="w-full h-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+          <div className="w-full h-full grid grid-cols-1 lg:grid-cols-2 2xl:grid-cols-3 gap-4">
             {Images.map((image, index) => {
               return (
                 <div className="flex w-[500px] h-[500px] justify-self-center overflow-hidden">

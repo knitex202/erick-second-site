@@ -7,7 +7,7 @@ import Contact from "./Pages/Contact";
 
 function App() {
   return (
-    <div className="flex flex-col w-full h-full bg-stone-950 ">
+    <div className="flex flex-col w-full h-full bg-stone-900 ">
       <div className="w-full h-full object-cover">
         <BrowserRouter>
           <Navbar />

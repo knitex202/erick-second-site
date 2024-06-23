@@ -27,8 +27,8 @@ function Contact() {
   };
 
   return (
-    <div className="flex flex-col w-screen h-screen justify-center items-center">
-      <div className="size-96 p-8 rounded-lg shadow-inner bg-white">
+    <div className="flex flex-col w-full h-screen sm:h-full md:h-full xl:h-screen bg-stone-900 justify-center items-center">
+      <div className="sm:my-24 size-96 p-8 rounded-lg shadow-inner bg-white">
         <form onSubmit={handleSubmit} className="flex flex-col gap-4">
           <input
             type="text"
@@ -62,7 +62,7 @@ function Contact() {
           </button>
         </form>
       </div>
-      <div className="absolute bottom-2 right-2">
+      <div className=" flex w-full justify-end">
       <p className="mt-8 xl:mr-24 mr-4 font-semibold text-stone-800 ">Website created by: <span>Hassan Wilson</span> </p>
       </div>
     </div>
