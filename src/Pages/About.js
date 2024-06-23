@@ -5,7 +5,7 @@ function About() {
   return (
     <div className="flex flex-col w-full h-full">
       <div className="flex flex-col w-full h-screen overflow-hidden">
-        <div className="flex flex-col z-40 w-full absolute ml-4 top-32 text-rose-200 xl:text-2xl gap-2 xl:end-24 xl:items-end">
+        <div className="flex flex-col z-40 w-full absolute ml-4 top-32 text-white xl:text-2xl gap-2 xl:end-24 xl:items-end">
           <p>HEIGHT: <span className="font-semibold">5'10"/178cm</span></p>
             <p>NECK: <span className="font-semibold">15½</span></p>
             <p>SLEEVE: <span className="font-semibold">30"</span></p>
@@ -21,6 +21,9 @@ function About() {
           className="w-full h-full object-cover"
           style={{ filter: "brightness(50%)", objectPosition: "30% 35%" }}
         />
+      </div>
+      <div className="absolute bottom-2 right-2">
+      <p className="mt-8 xl:mr-24 mr-4 font-semibold text-stone-700 xl:text-stone-400 ">Website created by: <span>Hassan Wilson</span> </p>
       </div>
     </div>
   );

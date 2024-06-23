@@ -48,6 +48,9 @@ function Campaigns() {
           </div>
         </div>
       </div>
+      <div className="flex justify-end">
+      <p className="mt-8 xl:mr-24 mr-4 font-semibold text-stone-200 xl:text-stone-400 ">Website created by: <span>Hassan Wilson</span> </p>
+      </div>
     </div>
   );
 }

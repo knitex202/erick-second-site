@@ -22,22 +22,22 @@ function Navbar() {
           <div className="flex flex-col w-full items-center">
             {showMenu ? (
               <ul className="flex flex-col w-full py-4 select-none font-semibold text-center lg:text-4xl ">
-                <Link to={"/"}>
+                <Link to={"/"} onClick={handleMenu}>
                   <li className="cursor-pointer py-4 hover:bg-gray-200 hover:text-teal-400">
                     <p>HOME</p>
                   </li>
                 </Link>
-                <Link to={"/campaigns"}>
+                <Link to={"/campaigns"} onClick={handleMenu}>
                   <li className="cursor-pointer py-4 hover:bg-gray-200 hover:text-teal-400">
                     <p>CAMPAIGNS</p>
                   </li>
                 </Link>
-                <Link to={"/about"}>
+                <Link to={"/about"} onClick={handleMenu}>
                   <li className="cursor-pointer py-4 hover:bg-gray-200 hover:text-teal-400">
                     <p>ABOUT ME</p>
                   </li>
                 </Link>
-                <Link to={"/contact"}>
+                <Link to={"/contact"} onClick={handleMenu}>
                   <li className="cursor-pointer py-4 hover:bg-gray-200 hover:text-teal-400">
                     <p>CONTACT ME</p>
                   </li>
