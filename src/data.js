@@ -26,6 +26,18 @@ import nike3 from './Assets/galleryImages/nike3.jpg';
 import nike4 from './Assets/galleryImages/nike4.jpg';
 import nike5 from './Assets/galleryImages/nike5.jpg';
 
+// Canam Campaign
+import canam1 from './Assets/galleryImages/canam1.jpg';
+import canam2 from './Assets/galleryImages/canam2.jpg';
+import canam3 from './Assets/galleryImages/canam3.jpg';
+import canam4 from './Assets/galleryImages/canam4.jpg';
+import canam5 from './Assets/galleryImages/canam5.jpg';
+import canam6 from './Assets/galleryImages/canam6.jpg';
+import canam7 from './Assets/galleryImages/canam7.jpg';
+import canam8 from './Assets/galleryImages/canam8.jpg';
+import canam9 from './Assets/galleryImages/canam9.jpg';
+
+
 export const Images = [
     {
         picture: erickOffice, alt: "Office Modeling"
@@ -104,3 +116,33 @@ export const nikeJordanImages = [
         picture: nike5, alt: "Nike Jordan Campaign"
     },
 ]
+
+export const canamImages = [
+    {
+        picture: canam1, alt: "Canam Campaign"
+    },
+    {
+        picture: canam2, alt: "Canam Campaign"
+    },
+    {
+        picture: canam3, alt: "Canam Campaign"
+    },
+    {
+        picture: canam4, alt: "Canam Campaign"
+    },
+    {
+        picture: canam5, alt: "Canam Campaign"
+    },
+    {
+        picture: canam6, alt: "Canam Campaign"
+    },
+    {
+        picture: canam7, alt: "Canam Campaign"
+    },
+    {
+        picture: canam8, alt: "Canam Campaign"
+    },
+    {
+        picture: canam9, alt: "Canam Campaign"
+    },
+];
