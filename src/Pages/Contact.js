@@ -2,21 +2,16 @@ import React, { useRef, useState } from "react";
 import emailjs from "emailjs-com";
 
 function Contact() {
-  
-  const [formdata, setFormData] = useState({
-    name: "",
-    user_email: "",
-    message: "",
-  })
 
-  const handleChange = (e) => {
-    setFormData({ ...formdata, [e.target.name]: e.target.value });
-  }
+  const form = useRef();
 
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    emailjs.send('Customer_Input_knite', 'template_ufetdcp', formdata, 'J56SqAg1nmqQT3-C2')
+    const formdata = new FormData(form.current);
+    const data = Object.fromEntries(formdata.entries());
+
+    emailjs.send('Customer_Input_knite', 'template_ufetdcp', data, 'J56SqAg1nmqQT3-C2')
       .then((response) => {
         alert('SUCCESS!', response.status, response.text);
         // handle success (e.g., show a success message)
@@ -29,12 +24,10 @@ function Contact() {
   return (
     <div className="flex flex-col w-full h-screen sm:h-full md:h-full xl:h-screen bg-stone-900 justify-center items-center">
       <div className="sm:my-24 size-96 p-8 rounded-lg shadow-inner bg-white">
-        <form onSubmit={handleSubmit} className="flex flex-col gap-4">
+        <form ref={form} onSubmit={handleSubmit} className="flex flex-col gap-4">
           <input
             type="text"
             name="name"
-            value={formdata.name}
-            onChange={handleChange}
             placeholder="Your Name"
             required
             className="p-1 border border-slate-300 rounded-md shadow focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 "
@@ -42,21 +35,18 @@ function Contact() {
           <input
             type="email"
             name="user_email"
-            value={formdata.email}
-            onChange={handleChange}
             placeholder="Your Email"
             required
             className="p-1 border border-slate-300 rounded-md shadow focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1"
           />
           <textarea
             name="message"
-            value={formdata.message}
-            onChange={handleChange}
             placeholder="Your Message"
             required
             className="p-1 border border-slate-300 rounded-md shadow focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1"></textarea>
           <button
             type="submit"
+            value="Send"
             className=" w-24 self-center p-2 border border-slate-300 rounded-md shadow text-stone-800 font-semibold hover:bg-slate-300 duration-500">
             Send
           </button>

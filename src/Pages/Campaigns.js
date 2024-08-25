@@ -2,7 +2,8 @@ import React from "react";
 import marleyLogo from "../Assets/campaignLogos/bobMarleyLogo.png";
 import NikeJordan from "../Assets/campaignLogos/Nike_Jordan.png"
 import canamLogo from "../Assets/campaignLogos/canamLogo.png";
-import { canamImages, marleyImages, nikeJordanImages } from "../data";
+import seadooLogo from "../Assets/campaignLogos/seadooLogo.png";
+import { canamImages, marleyImages, nikeJordanImages, seadooImages } from "../data";
 
 function Campaigns() {
   return (
@@ -55,6 +56,27 @@ function Campaigns() {
           <div className="flex overflow-hidden">
             <div className="w-full h-full grid grid-cols-1 lg:grid-cols-2 2xl:grid-cols-3 gap-4">
               {canamImages.map((image, index) => {
+                return (
+                  <div className="flex w-[500px] h-[500px] justify-self-center overflow-hidden">
+                    <img
+                      key={index}
+                      src={image.picture}
+                      alt={image.alt}
+                      className="w-full h-full object-cover hover:scale-125 ease-in-out duration-700"
+                    />
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="flex flex-col w-full py-8 mt-16 bg-white">
+        <img src={seadooLogo} alt="Bob Marley Logo" className="w-96 h-full self-end" />
+        <div className="flex flex-cols justify-center mt-16">
+          <div className="flex overflow-hidden">
+            <div className="w-full h-full grid grid-cols-1 lg:grid-cols-2 2xl:grid-cols-3 gap-4">
+              {seadooImages.map((image, index) => {
                 return (
                   <div className="flex w-[500px] h-[500px] justify-self-center overflow-hidden">
                     <img

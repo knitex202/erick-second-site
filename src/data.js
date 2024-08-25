@@ -37,6 +37,13 @@ import canam7 from './Assets/galleryImages/canam7.jpg';
 import canam8 from './Assets/galleryImages/canam8.jpg';
 import canam9 from './Assets/galleryImages/canam9.jpg';
 
+// Seadoo Campaign
+import seadoo1 from './Assets/galleryImages/erick-seadoo1.jpg';
+import seadoo2 from './Assets/galleryImages/erick-seadoo2.jpg';
+import seadoo3 from './Assets/galleryImages/erick-seadoo3.jpg';
+import seadoo4 from './Assets/galleryImages/erick-seadoo4.jpg';
+import seadoo5 from './Assets/galleryImages/erick-seadoo5.jpg';
+
 
 export const Images = [
     {
@@ -66,7 +73,7 @@ export const Images = [
     {
         picture: snow3, alt: "Snow day standing and smiling"
     },
-]
+];
 
 
 export const marleyImages = [
@@ -97,7 +104,7 @@ export const marleyImages = [
     {
         picture: marley9, alt: "Marley Campaign"
     },
-]
+];
 
 export const nikeJordanImages = [
     {
@@ -115,7 +122,7 @@ export const nikeJordanImages = [
     {
         picture: nike5, alt: "Nike Jordan Campaign"
     },
-]
+];
 
 export const canamImages = [
     {
@@ -144,5 +151,23 @@ export const canamImages = [
     },
     {
         picture: canam9, alt: "Canam Campaign"
+    },
+];
+
+export const seadooImages = [
+    {
+        picture: seadoo1, alt: "Seadoo Campaign"
+    },
+    {
+        picture: seadoo2, alt: "Seadoo Campaign"
+    },
+    {
+        picture: seadoo3, alt: "Seadoo Campaign"
+    },
+    {
+        picture: seadoo4, alt: "Seadoo Campaign"
+    },
+    {
+        picture: seadoo5, alt: "Seadoo Campaign"
     },
 ];
