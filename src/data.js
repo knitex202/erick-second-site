@@ -22,9 +22,14 @@ import marley9 from './Assets/galleryImages/marley9.jpg';
 // Nike Jordan Campaign
 import nike1 from './Assets/galleryImages/nike1.jpg';
 import nike2 from './Assets/galleryImages/nike2.jpg';
-import nike3 from './Assets/galleryImages/nike3.jpg';
+import nike3 from './Assets/galleryImages/nike9.jpg';
 import nike4 from './Assets/galleryImages/nike4.jpg';
 import nike5 from './Assets/galleryImages/nike5.jpg';
+import nike6 from './Assets/galleryImages/nike6.jpg';
+import nike7 from './Assets/galleryImages/nike7.jpg';
+import nike8 from './Assets/galleryImages/nike8.jpg';
+import nike9 from './Assets/galleryImages/nike3.jpg';
+
 
 // Canam Campaign
 import canam1 from './Assets/galleryImages/canam1.jpg';
@@ -122,6 +127,19 @@ export const nikeJordanImages = [
     {
         picture: nike5, alt: "Nike Jordan Campaign"
     },
+    {
+        picture: nike6, alt: "Nike Jordan Campaign"
+    },
+    {
+        picture: nike7, alt: "Nike Jordan Campaign"
+    },
+    {
+        picture: nike8, alt: "Nike Jordan Campaign"
+    },
+    {
+        picture: nike9, alt: "Nike Jordan Campaign"
+    },
+    
 ];
 
 export const canamImages = [
