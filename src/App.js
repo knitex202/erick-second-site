@@ -7,8 +7,8 @@ import Contact from "./Pages/Contact";
 
 function App() {
   return (
-    <div className="flex flex-col w-full h-full bg-stone-900 ">
-      <div className="w-full h-full object-cover">
+    <div className="min-h-screen bg-[#080807] text-stone-100">
+      <div className="min-h-screen">
         <BrowserRouter>
           <Navbar />
           <Routes>
@@ -19,7 +19,6 @@ function App() {
           </Routes>
         </BrowserRouter>
       </div>
-      
     </div>
   );
 }

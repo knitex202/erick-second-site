@@ -1,31 +1,54 @@
 import React from "react";
-import aboutImage from "../Assets/galleryImages/aboutImage.jpg";
+import { Link } from "react-router-dom";
+import erickOffice from "../Assets/galleryImages/erick-office.jpg";
+import tableSitting from "../Assets/galleryImages/sitting-on-table.jpg";
+import suitWalking from "../Assets/galleryImages/erick-suit-walking.jpg";
+import bikeHead from "../Assets/galleryImages/erick-suit-bicycle.jpg";
 
 function About() {
+  const stats = [
+    ["Height", "5'10\" / 178cm"],
+    ["Neck", "15 1/2"],
+    ["Sleeve", "33\""],
+    ["Waist", "32\""],
+    ["Inseam", "30\""],
+    ["Shoe", "10.5"],
+    ["Hair", "Grey"],
+    ["Eyes", "Brown"],
+  ];
+
   return (
-    <div className="flex flex-col w-screen h-full overflow-hidden">
-      <div className="flex flex-col w-full short:h-[600px] h-screen overflow-hidden">
-        <div className="flex flex-col z-40 w-full absolute ml-4 top-32 text-white xl:text-2xl gap-2 xl:end-24 xl:items-end">
-          <p>HEIGHT: <span className="font-semibold">5'10"/ 178cm</span></p>
-            <p>NECK: <span className="font-semibold">15½</span></p>
-            <p>SLEEVE: <span className="font-semibold">33"</span></p>
-            <p>WAIST/INSEAM: <span className="font-semibold">32/30"</span></p>
-            <p>COAT: <span className="font-semibold">40 REGULAR</span></p>
-            <p>SHOE: <span className="font-semibold">10½</span></p>
-            <p>HAIR: <span className="font-semibold">GREY</span></p>
-            <p>EYES: <span className="font-semibold">BROWN</span></p>
+    <main className="screen-page">
+      <section className="about-screen">
+        <div className="about-copy">
+          <h1 className="page-heading">About</h1>
+          <p>
+            Erick Cedeno is a commercial and lifestyle model with campaign work
+            spanning fashion, outdoor, watercraft, and culture-driven brands.
+          </p>
+
+          <dl className="stat-list">
+            {stats.map(([label, value]) => (
+              <div className="stat-line" key={label}>
+                <dt>{label}</dt>
+                <dd>{value}</dd>
+              </div>
+            ))}
+          </dl>
+
+          <Link to="/contact" className="outline-action">
+            Contact
+            <span>-></span>
+          </Link>
         </div>
-        <img
-          src={aboutImage}
-          alt="About me background"
-          className="w-full h-full object-cover"
-          style={{ filter: "brightness(50%)", objectPosition: "30% 35%" }}
-        />
-      </div>
-      <div className="absolute bottom-2 right-2">
-      <p className="mt-8 xl:mr-24 mr-4 font-semibold text-stone-700 xl:text-stone-400 ">Website created by: <span>Hassan Wilson</span> </p>
-      </div>
-    </div>
+
+        <div className="about-collage">
+          <img src={tableSitting} alt="Erick Cedeno seated editorial"  />
+          <img src={suitWalking} alt="Erick Cedeno walking in suit" className="about-large" />
+          <img src={bikeHead} alt="Erick Cedeno campaign portrait" />
+        </div>
+      </section>
+    </main>
   );
 }
 

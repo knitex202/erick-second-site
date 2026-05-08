@@ -10,8 +10,7 @@ function Gallery() {
             key={index}
             src={image.picture}
             alt={image.alt}
-            height={600}
-            width={600}
+            className="h-full w-full object-cover"
           />
         );
       })}

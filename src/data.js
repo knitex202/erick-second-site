@@ -49,6 +49,11 @@ import seadoo3 from './Assets/galleryImages/erick-seadoo3.jpg';
 import seadoo4 from './Assets/galleryImages/erick-seadoo4.jpg';
 import seadoo5 from './Assets/galleryImages/erick-seadoo5.jpg';
 
+import marleyLogo from "./Assets/campaignLogos/bobMarleyLogo.png";
+import NikeJordan from "./Assets/campaignLogos/Nike_Jordan.png";
+import canamLogo from "./Assets/campaignLogos/canamLogo.png";
+import seadooLogo from "./Assets/campaignLogos/seadooLogo.png";
+
 
 export const Images = [
     {
@@ -187,5 +192,36 @@ export const seadooImages = [
     },
     {
         picture: seadoo5, alt: "Seadoo Campaign"
+    },
+];
+
+export const campaignGroups = [
+    {
+        name: "Bob Marley",
+        logo: marleyLogo,
+        logoAlt: "Bob Marley Logo",
+        images: marleyImages,
+        summary: "Warm lifestyle frames with relaxed movement, music culture, and saturated campaign color.",
+    },
+    {
+        name: "Nike Jordan",
+        logo: NikeJordan,
+        logoAlt: "Nike Jordan Logo",
+        images: nikeJordanImages,
+        summary: "Athletic editorial work built around presence, shape, and clean commercial energy.",
+    },
+    {
+        name: "Can-Am",
+        logo: canamLogo,
+        logoAlt: "Can-Am Logo",
+        images: canamImages,
+        summary: "Outdoor campaign imagery with product-forward pacing and an adventure-focused edge.",
+    },
+    {
+        name: "Sea-Doo",
+        logo: seadooLogo,
+        logoAlt: "Sea-Doo Logo",
+        images: seadooImages,
+        summary: "Bright watercraft work with movement, summer light, and broad lifestyle framing.",
     },
 ];
