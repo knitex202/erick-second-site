@@ -1,6 +1,5 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import erickOffice from "../Assets/galleryImages/erick-office.jpg";
 import tableSitting from "../Assets/galleryImages/sitting-on-table.jpg";
 import suitWalking from "../Assets/galleryImages/erick-suit-walking.jpg";
 import bikeHead from "../Assets/galleryImages/erick-suit-bicycle.jpg";

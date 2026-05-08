@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
+import instagramWhite from "../Assets/instagram-white.png";
 
 function Navbar() {
   const [showMenu, setShowMenu] = useState(false);
@@ -31,16 +32,28 @@ function Navbar() {
         ))}
       </nav>
 
-      <button
-        type="button"
-        className="portfolio-menu"
-        aria-label="Toggle navigation menu"
-        aria-expanded={showMenu}
-        onClick={() => setShowMenu((isOpen) => !isOpen)}
-      >
-        <span />
-        <span />
-      </button>
+      <div className="portfolio-mobile-actions">
+        <a
+          href="https://www.instagram.com/mr.erickcedeno/"
+          target="_blank"
+          rel="noreferrer"
+          className="portfolio-instagram portfolio-instagram-mobile"
+          aria-label="Open Erick Cedeno on Instagram"
+        >
+          <img src={instagramWhite} alt="" />
+        </a>
+
+        <button
+          type="button"
+          className="portfolio-menu"
+          aria-label="Toggle navigation menu"
+          aria-expanded={showMenu}
+          onClick={() => setShowMenu((isOpen) => !isOpen)}
+        >
+          <span />
+          <span />
+        </button>
+      </div>
 
       {showMenu ? (
         <nav className="portfolio-mobile-menu" aria-label="Mobile navigation">

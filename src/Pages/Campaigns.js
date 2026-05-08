@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { campaignGroups } from "../data";
 
 function Campaigns() {
@@ -7,6 +7,7 @@ function Campaigns() {
     ...campaign,
     cover: campaign.images[coverIndexes[index]],
   }));
+  const [selectedCampaign, setSelectedCampaign] = useState(featuredCampaigns[0]);
 
   return (
     <main className="screen-page">
@@ -20,7 +21,14 @@ function Campaigns() {
 
         <div className="campaign-card-row">
           {featuredCampaigns.map((campaign) => (
-            <article className="campaign-card" key={campaign.name}>
+            <button
+              type="button"
+              className={`campaign-card ${
+                selectedCampaign.name === campaign.name ? "campaign-card-active" : ""
+              }`}
+              key={campaign.name}
+              onClick={() => setSelectedCampaign(campaign)}
+            >
               <img
                 src={campaign.cover.picture}
                 alt={campaign.cover.alt}
@@ -33,9 +41,24 @@ function Campaigns() {
                 className="campaign-card-logo"
               />
               <h2 className="campaign-card-title">{campaign.name}</h2>
-            </article>
+            </button>
           ))}
         </div>
+
+        <section className="campaign-detail" aria-live="polite">
+          <div className="campaign-detail-copy">
+            <p>{selectedCampaign.name}</p>
+            <h2>{selectedCampaign.summary}</h2>
+          </div>
+
+          <div className="campaign-detail-grid">
+            {selectedCampaign.images.map((image) => (
+              <figure key={image.picture}>
+                <img src={image.picture} alt={image.alt} />
+              </figure>
+            ))}
+          </div>
+        </section>
       </section>
     </main>
   );

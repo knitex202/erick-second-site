@@ -105,6 +105,36 @@
   color: #fff;
 }
 
+.portfolio-mobile-actions {
+  display: none;
+  align-items: center;
+  gap: 0.65rem;
+}
+
+.portfolio-instagram {
+  display: grid;
+  width: 2.75rem;
+  height: 2.75rem;
+  place-items: center;
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  background: rgba(255, 255, 255, 0.05);
+  transition: border-color 180ms ease, background 180ms ease;
+}
+
+.portfolio-instagram:hover {
+  border-color: rgba(255, 255, 255, 0.46);
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.portfolio-instagram img {
+  width: 1.08rem;
+  height: 1.08rem;
+}
+
+.portfolio-instagram-mobile {
+  display: none;
+}
+
 .portfolio-menu span {
   width: 1.1rem;
   height: 1px;
@@ -181,6 +211,13 @@
   z-index: 2;
 }
 
+.landing-instagram {
+  position: absolute;
+  right: clamp(2rem, 5vw, 5rem);
+  bottom: clamp(2rem, 5vw, 5rem);
+  z-index: 3;
+}
+
 .display-heading,
 .page-heading {
   margin: 0;
@@ -235,6 +272,10 @@
   padding: clamp(6rem, 12vh, 9rem) clamp(2rem, 4vw, 4rem) clamp(2rem, 5vw, 4rem);
 }
 
+.campaign-screen {
+  overflow: visible;
+}
+
 .page-heading {
   font-size: clamp(4.8rem, 7vw, 8.5rem);
   line-height: 0.88;
@@ -263,7 +304,11 @@
   position: relative;
   min-height: min(48vh, 31rem);
   overflow: hidden;
+  border: 1px solid transparent;
   background: #111;
+  padding: 0;
+  text-align: left;
+  cursor: pointer;
 }
 
 .campaign-card-image {
@@ -279,6 +324,10 @@
 
 .campaign-card:hover .campaign-card-image {
   transform: scale(1.045);
+}
+
+.campaign-card-active {
+  border-color: rgba(255, 255, 255, 0.65);
 }
 
 .campaign-card-gradient {
@@ -311,6 +360,52 @@
   letter-spacing: 0.12em;
   text-align: center;
   text-transform: uppercase;
+}
+
+.campaign-detail {
+  display: grid;
+  grid-template-columns: minmax(15rem, 0.34fr) minmax(0, 1fr);
+  gap: clamp(1.5rem, 3vw, 3rem);
+  margin-top: clamp(2rem, 5vh, 4rem);
+  padding-top: clamp(1.5rem, 4vh, 3rem);
+  border-top: 1px solid rgba(255, 255, 255, 0.14);
+}
+
+.campaign-detail-copy p {
+  margin: 0 0 0.8rem;
+  color: #fff;
+  font-size: 0.82rem;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.campaign-detail-copy h2 {
+  max-width: 22rem;
+  margin: 0;
+  color: rgba(242, 240, 235, 0.72);
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.55;
+}
+
+.campaign-detail-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.75rem;
+}
+
+.campaign-detail-grid figure {
+  min-height: 18rem;
+  margin: 0;
+  overflow: hidden;
+  background: #111;
+}
+
+.campaign-detail-grid img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .about-screen {
@@ -479,8 +574,20 @@
     display: none;
   }
 
+  .portfolio-mobile-actions {
+    display: flex;
+  }
+
   .portfolio-menu {
     display: grid;
+  }
+
+  .portfolio-instagram-mobile {
+    display: grid;
+  }
+
+  .landing-instagram {
+    display: none;
   }
 
   .hero-screen,
@@ -506,7 +613,9 @@
   }
 
   .campaign-card-row,
-  .about-screen {
+  .about-screen,
+  .campaign-detail,
+  .campaign-detail-grid {
     grid-template-columns: 1fr;
   }
 
