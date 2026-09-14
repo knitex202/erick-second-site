@@ -35,7 +35,7 @@ jobs:
         run: npm ci
       - name: Build React app
         env:
-          PUBLIC_URL: /erick-second-site
+          PUBLIC_URL: .
         run: npm run build
       - name: Support direct routes on GitHub Pages
         run: Copy-Item build/index.html build/404.html
