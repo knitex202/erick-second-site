@@ -9,7 +9,7 @@ function App() {
   return (
     <div className="min-h-screen bg-[#080807] text-stone-100">
       <div className="min-h-screen">
-        <BrowserRouter>
+        <BrowserRouter basename={process.env.PUBLIC_URL || undefined}>
           <Navbar />
           <Routes>
             <Route path="/" element={<Landing />} />
